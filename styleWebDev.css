@@ -70,12 +70,15 @@ h2 {
 /* Links */
 
 a {
-    color: #000;
-    text-decoration: none;
+    color: blue;
+}
+
+a:visited {
+    color: black;
 }
 
 a:hover {
-    color: #ccc;
+    color: red;
 }
 
 
