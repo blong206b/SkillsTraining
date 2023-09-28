@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello, World!</title>
+</head>
+
+<body>
+    <h1>Hello, World!</h1>
+
+    <button type="button" id="push-button">Push</button>
+
+    <script>
+        const pushButton = document.getElementById('push-button');
+
+        pushButton.addEventListener('click', () => {
+            pushButton.textContent = 'Pushed';
+        });
+    </script>
+</body>
+
+</html>
