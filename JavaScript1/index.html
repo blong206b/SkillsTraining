@@ -10,12 +10,31 @@
 
     <button type="button" id="push-button">Push</button>
 
+    <button type="button" id="change-background-color">Change Background Color</button>
+
     <script>
         const pushButton = document.getElementById('push-button');
 
         pushButton.addEventListener('click', () => {
             pushButton.textContent = 'Pushed';
         });
+
+        function changeBackgroundColor() {
+            // Get the body element.
+            const body = document.querySelector('body');
+
+            // Generate a random color.
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+
+            // Set the background color of the body element.
+            body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }
+
+        // Add an event listener to the button.
+        const changeBackgroundColorButton = document.getElementById('change-background-color');
+        changeBackgroundColorButton.addEventListener('click', changeBackgroundColor);
     </script>
 </body>
 
