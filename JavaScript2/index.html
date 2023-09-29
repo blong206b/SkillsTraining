@@ -36,6 +36,10 @@
     </header>
     <h1>Hello, World!</h1>
 
+    <!-- Here's your new button -->
+    <button type="button" onclick="changeTitle()">Change Title</button>
+
+
     <button type="button" id="push-button">Push</button>
 
     <button type="button" id="change-background-color">Change Background Color</button>
@@ -63,6 +67,10 @@
         // Add an event listener to the button.
         const changeBackgroundColorButton = document.getElementById('change-background-color');
         changeBackgroundColorButton.addEventListener('click', changeBackgroundColor);
+        // New function to change title
+        function changeTitle() {
+            document.title = 'New Title';
+        }
     </script>
 </body>
 
