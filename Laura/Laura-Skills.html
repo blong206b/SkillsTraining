@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Gieg - Skill Levels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            width: 50%;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill {
+            margin-bottom: 10px;
+        }
+        
+        .skill-label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .skill-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .skill-level {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #76c7c0;
+            border-radius: 10px 0 0 10px;
+            text-align: right;
+            line-height: 20px;
+            padding-right: 5px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="skill">
+            <div class="skill-label">HTML:</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 100%;">10/10</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-label">CSS:</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;">8/10</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-label">JavaScript:</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 50%;">5/10</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-label">React:</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 30%;">3/10</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
