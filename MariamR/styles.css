@@ -45,7 +45,7 @@ h4 {
   width: 50%;  /* Decreased to 50% */
   height: auto; /* Maintain aspect ratio */
   position: absolute;
-  top: 50%; /* Center vertically */
+  top: 0%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Necessary for true centering */
   z-index: -1;  /* Make sure it stays behind the content */
