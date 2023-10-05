@@ -39,3 +39,13 @@ h3 {
 h4 {
   font-style: italic;
 }
+
+/* Shield image styling */
+#shield-image {
+  width: 100%;  /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;  /* Make sure it stays behind the content */
+}
