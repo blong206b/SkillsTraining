@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        
+        .bar {
+            width: 30px;
+            border: 1px solid #ddd;
+        }
+        
+        .label {
+            text-align: center;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chart">
+        <div class="bar" style="height: 100px; background-color: lightgreen;">
+            <div class="label">Recognition Memory</div>
+        </div>
+        <div class="bar" style="height: 80px; background-color: lightblue;">
+            <div class="label">Abstract Reasoning</div>
+        </div>
+        <div class="bar" style="height: 90px; background-color: lightcoral;">
+            <div class="label">Spatial Reasoning</div>
+        </div>
+        <div class="bar" style="height: 90px; background-color: gold;">
+            <div class="label">Language Comprehension</div>
+        </div>
+        <div class="bar" style="height: 60px; background-color: mediumpurple;">
+            <div class="label">Verbal Reasoning</div>
+        </div>
+        <div class="bar" style="height: 100px; background-color: black; color: white;">
+            <div class="label">Digit Symbol Coding</div>
+        </div>
+        <div class="bar" style="height: 90px; background-color: grey;">
+            <div class="label">Numerical Reasoning</div>
+        </div>
+    </div>
+</body>
+
+</html>
