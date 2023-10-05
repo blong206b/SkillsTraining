@@ -42,10 +42,11 @@ h4 {
 
 /* Shield image styling */
 #shield-image {
-  width: 100%;  /* Adjust as needed */
+  width: 50%;  /* Decreased to 50% */
   height: auto; /* Maintain aspect ratio */
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Necessary for true centering */
   z-index: -1;  /* Make sure it stays behind the content */
 }
