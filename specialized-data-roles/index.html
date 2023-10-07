@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Roles Decision Tree</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Data Roles Decision Tree</h1>
+
+  <div id="node-0" class="node active">
+    <h2>Do you prefer working with raw data or analyzing data?</h2>
+    <button onclick="moveToNode(1)">Working with Raw Data</button>
+    <button onclick="moveToNode(2)">Analyzing Data</button>
+  </div>
+
+  <div id="node-1" class="node">
+    <h2>Data Engineer</h2>
+    <p>As a Data Engineer, you will be responsible for collecting, storing, and processing data. This involves creating and maintaining data pipelines, databases, and data storage solutions.</p>
+    <p>You'll work closely with Data Scientists and Analysts, making the data accessible and usable for them. Knowledge in SQL, Python, and cloud services is often required.</p>
+  </div>
+
+  <div id="node-2" class="node">
+    <h2>Data Analyst</h2>
+    <p>A Data Analyst interprets data to provide actionable insights for the company. They create dashboards, graphs, and visual presentations to help the business make informed decisions.</p>
+    <p>Typically, a Data Analyst will need to be proficient in statistical tools, SQL, and data visualization software like Tableau.</p>
+  </div>
+
+  <button id="start-over-button" onclick="startOver()">Start Over</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
