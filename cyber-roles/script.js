@@ -23,9 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById(`node-${currentNode}`).classList.add('active');
   }
 
+  function navigateToDetails() {
+    window.location.href = 'https://blong206b.github.io/SkillsTraining/specialized-data-roles/';
+  }
+
   window.moveToNode = moveToNode;
   window.moveBack = moveBack;
   window.startOver = startOver;
+  window.navigateToDetails = navigateToDetails;  // Don't forget this line
 
   moveToNode(0);  // Initialize to start node
 });
