@@ -20,26 +20,34 @@
     <button onclick="moveToNode(3)">No</button>
   </div>
 
-
-<div id="node-2" class="node">
-  Mid/Specialized Roles: Data Engineer, Data Scientist.
-  <button onclick="moveToNode(4)">Specialized Interests?</button>
-  <div class="image-container">
-    <div class="image-wrapper">
-      <img class="role-image" src="img/DataEngineer.jpg" alt="Data Engineer">
-    </div>
-    <div class="image-wrapper">
-      <img class="role-image" src="img/DataScientist.jpg" alt="Data Scientist">
+  <div id="node-2" class="node">
+    Mid/Specialized Roles: Data Engineer, Data Scientist.
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img class="role-image" src="img/DataEngineer.jpg" alt="Data Engineer">
+        <div class="image-description">
+          <!-- Description for Data Engineer -->
+Data engineers are responsible for building, maintaining, and optimizing the systems that collect, store, process, and analyze data. They play a critical role in helping organizations to make better decisions by providing them with the insights they need to understand their customers, products, and operations.
+        <br><br>
+        Data engineers work with a variety of technologies, including:
+        <ul>
+          <li>Databases: Data engineers design, build, and maintain databases to store and manage data. They also develop and maintain data pipelines to move data between different systems.</li>
+          <li>Big data technologies: Data engineers work with big data technologies such as Hadoop and Spark to process and analyze large datasets.</li>
+          <li>Cloud computing: Data engineers use cloud computing platforms such as AWS, Azure, and GCP to host and manage data systems.</li>
+        </ul>
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <img class="role-image" src="img/DataScientist.jpg" alt="Data Scientist">
+        <!-- You can add a similar description for Data Scientist here -->
+      </div>
     </div>
   </div>
-</div>
-
   
   <div id="node-3" class="node">
     Entry-Level Roles: Data Analyst, Reporting Analyst.
   </div>
 
-  <!-- Here is your new node-4 -->
   <div id="node-4" class="node">
     Specialized Roles: NLP Data Scientist, GeoSpatial Analyst, Quantitative Analyst.
   </div>
@@ -57,7 +65,7 @@
   <div id="node-8" class="node">
     Entry-Level Roles: Business Analyst, Operations Analyst.
   </div>
-
+  
   <script src="script.js"></script>
 </body>
 </html>
