@@ -53,3 +53,13 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+/* New code for images in the decision tree */
+.role-image {
+  width: 30%;
+  float: left;
+}
+
+.image-container {
+  overflow: hidden;  /* Clearfix for floated elements */
+}
