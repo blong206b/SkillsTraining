@@ -1,3 +1,4 @@
+console.log("Script starting...");
 document.addEventListener("DOMContentLoaded", function() {
   // Initialize currentNode and historyStack
   let currentNode = 0;
@@ -50,3 +51,5 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initialize to start node
   moveToNode(0);
 });
+
+console.log("Script loaded");
