@@ -17,4 +17,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Initialize to the start node
   moveToNode(0);
+ console.log('Script loaded');
 });
