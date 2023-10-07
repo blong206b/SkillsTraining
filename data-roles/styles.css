@@ -1,65 +1,60 @@
-/* General Page Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+/* Reset some default browser styles */
+body, h1, button {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
-  background-color: #333;
-  color: white;
-  margin: 0;
+/* Add a background color and some padding around the entire page */
+body {
+  background-color: #f4f4f4;
   padding: 20px;
-  text-align: center;
 }
 
-/* Container for nodes, if needed */
-.container {
-  max-width: 800px;
-  margin: auto;
-}
-
-/* Node styles */
+/* Style the nodes */
 .node {
-  display: none;
+  display: none;  /* Nodes are hidden by default */
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  padding: 30px;
-  font-size: 18px;  /* Upsized for readability */
-  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
 
-/* Class for the currently visible node */
+/* The 'active' class will show a node */
 .node.active {
   display: block;
 }
 
-/* Button Styles */
-button {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 5px;
-  border-radius: 4px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* New code for images in the decision tree */
-.role-image {
-  width: 30%;
-  float: left;
-}
-
+/* Image container for flexbox layout */
 .image-container {
-  overflow: hidden;  /* Clearfix for floated elements */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Wrapper for each image */
+.image-wrapper {
+  width: 30%;
+}
+
+/* Adds a left margin to the second image wrapper */
+.image-wrapper + .image-wrapper {
+  margin-left: 10%;
+}
+
+/* Makes the image take the full width of its wrapper */
+.role-image {
+  width: 100%;
+}
+
+/* Add some spacing and centering for buttons and title */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
