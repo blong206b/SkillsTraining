@@ -1,10 +1,53 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Node styles */
 .node {
   display: none;
-  border: 1px solid #000;
-  margin: 10px;
-  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 30px;
+  transition: all 0.3s ease-in-out;
 }
 
 .node.active {
   display: block;
+}
+
+/* Button styles */
+button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

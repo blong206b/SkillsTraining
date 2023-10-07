@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById(`node-${currentNode}`).classList.add('active');
   }
   
+  function moveBack() {
+    if (historyStack.length === 0) return;
+    document.getElementById(`node-${currentNode}`).classList.remove('active');
+    currentNode = historyStack.pop();
+    document.getElementById(`node-${currentNode}`).classList.add('active');
+  }
+
   window.moveToNode = moveToNode;
   moveToNode(0);  // Start node
 });
