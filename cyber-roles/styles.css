@@ -1,0 +1,10 @@
+.node {
+  display: none;
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 20px;
+}
+
+.node.active {
+  display: block;
+}

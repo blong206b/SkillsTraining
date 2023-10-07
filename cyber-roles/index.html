@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security+ Career Path</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Security+ Career Path Decision Tree</h1>
+  
+  <div id="node-0" class="node">
+    Do you want to work in a technical or managerial role?
+    <button onclick="moveToNode(1)">Technical Role</button>
+    <button onclick="moveToNode(6)">Managerial Role</button>
+  </div>
+
+  <div id="node-1" class="node">
+    Do you enjoy hands-on tasks or analytical tasks more?
+    <button onclick="moveToNode(2)">Hands-on Tasks</button>
+    <button onclick="moveToNode(4)">Analytical Tasks</button>
+  </div>
+
+  <div id="node-2" class="node">
+    Roles: Security Technician, Systems Administrator, Network Administrator.
+    <button onclick="moveToNode(3)">Apply for these roles</button>
+    <button onclick="moveToNode(1)">Back</button>
+  </div>
+
+  <div id="node-3" class="node">
+    Consider acquiring skills or certifications like CCNA, CEH for more specialized roles.
+    <!-- Add your additional guidance here -->
+  </div>
+
+  <div id="node-4" class="node">
+    Roles: Security Analyst, Threat Intelligence Analyst, Risk Assessor.
+    <button onclick="moveToNode(5)">Apply for these roles</button>
+    <button onclick="moveToNode(1)">Back</button>
+  </div>
+
+  <div id="node-5" class="node">
+    Consider acquiring skills or certifications like CISSP, CISM for higher-level roles.
+    <!-- Add your additional guidance here -->
+  </div>
+
+  <div id="node-6" class="node">
+    Do you have prior managerial experience?
+    <button onclick="moveToNode(7)">Yes</button>
+    <button onclick="moveToNode(1)">No</button>
+  </div>
+
+  <div id="node-7" class="node">
+    Roles: Security Manager, Information Security Officer, Compliance Manager.
+    <button onclick="moveToNode(8)">Apply for these roles</button>
+    <button onclick="moveToNode(6)">Back</button>
+  </div>
+
+  <div id="node-8" class="node">
+    Consider pursuing a PMP or an MBA for advanced managerial roles.
+    <!-- Add your additional guidance here -->
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+
