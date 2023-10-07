@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Analytics Career Path</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Data Analytics Career Path Decision Tree</h1>
+  
+  <!-- Nodes for each decision point -->
+  <div id="node-0" class="node active">
+    Do you enjoy technical or business-oriented tasks more?
+    <button onclick="moveToNode(1)">Technical</button>
+    <button onclick="moveToNode(6)">Business</button>
+  </div>
+  
+  <div id="node-1" class="node">
+    Do you have strong coding skills?
+    <button onclick="moveToNode(2)">Yes</button>
+    <button onclick="moveToNode(3)">No</button>
+  </div>
+
+  <div id="node-2" class="node">
+    Mid/Specialized Roles: Data Engineer, Data Scientist.
+    <button onclick="moveToNode(4)">Specialized Interests?</button>
+  </div>
+  
+  <div id="node-3" class="node">
+    Entry-Level Roles: Data Analyst, Reporting Analyst.
+  </div>
+
+  <div id="node-4" class="node">
+    Specialized Roles: NLP Data Scientist, GeoSpatial Analyst, Quantitative Analyst.
+  </div>
+  
+  <div id="node-6" class="node">
+    Do you have domain expertise?
+    <button onclick="moveToNode(7)">Yes</button>
+    <button onclick="moveToNode(8)">No</button>
+  </div>
+
+  <div id="node-7" class="node">
+    Specialized Roles: Healthcare Analyst, Customer Analytics Manager.
+  </div>
+
+  <div id="node-8" class="node">
+    Entry-Level Roles: Business Analyst, Operations Analyst.
+    <button onclick="moveToNode(9)">Consider Managerial Roles</button>
+  </div>
+  
+  <div id="node-9" class="node">
+    Consider managerial or consulting roles.
+  </div>
+
+  <!-- Start Over Button -->
+  <button onclick="startOver()">Start Over</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
