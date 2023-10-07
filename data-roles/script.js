@@ -36,12 +36,16 @@ document.addEventListener("DOMContentLoaded", function() {
     currentNode = 0;
     // Show the starting node
     document.getElementById(`node-${currentNode}`).classList.add('active');
+     // New function to navigate to the specialized roles page
+  function navigateToDetails() {
+    window.location.href = 'https://blong206b.github.io/SkillsTraining/specialized-data-roles/';
   }
 
   // Expose these functions to the global window object
   window.moveToNode = moveToNode;
   window.moveBack = moveBack;
   window.startOver = startOver;
+  window.navigateToDetails = navigateToDetails; // Assign new function to window object
 
   // Initialize to start node
   moveToNode(0);
