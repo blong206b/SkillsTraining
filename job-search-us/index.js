@@ -44,6 +44,19 @@ app.get('/getJobs', async(req, res) => {
     }
 });
 
+const cors = require('cors');
+
+const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
+
+// Your other routes and middleware here
+
+app.listen(3000, function() {
+    console.log('Server running at http://localhost:3000/');
+});
+
 // Simple "Hello, World!" endpoint
 app.get('/', (req, res) => {
     res.send('Hello, World!');
