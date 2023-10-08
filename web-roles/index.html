@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Developer Roles Flowchart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Web Developer Career Path Flowchart</h1>
+  <div id="node-0" class="node active">
+    Do you prefer front-end, back-end, or both?
+    <button onclick="moveToNode(1)">Front-end</button>
+    <button onclick="moveToNode(9)">Back-end</button>
+    <button onclick="moveToNode(17)">Both (Full-stack)</button>
+  </div>
+  
+  <!-- Front-end Choices -->
+  <!-- ...existing front-end nodes... -->
+ <h2>You have selected Front End!</h2>
+
+  <!-- Back-end Choices -->
+  <div id="node-9" class="node">
+    Are you interested in database management?
+    <button onclick="moveToNode(10)">Yes (Database Developer)</button>
+    <button onclick="moveToNode(11)">No</button>
+  </div>
+  
+  <div id="node-10" class="node">
+    Role: Database Developer
+  </div>
+
+  <div id="node-11" class="node">
+    Are you interested in infrastructure?
+    <button onclick="moveToNode(12)">Yes (DevOps Engineer)</button>
+    <button onclick="moveToNode(13)">No</button>
+  </div>
+  
+  <div id="node-12" class="node">
+    Role: DevOps Engineer
+  </div>
+
+  <div id="node-13" class="node">
+    Are you interested in security?
+    <button onclick="moveToNode(14)">Yes (Security Engineer)</button>
+    <button onclick="moveToNode(15)">No</button>
+  </div>
+
+  <div id="node-14" class="node">
+    Role: Security Engineer
+  </div>
+
+  <div id="node-15" class="node">
+    General Back-end or mobile development?
+    <button onclick="moveToNode(16)">General (Backend Developer)</button>
+    <button onclick="moveToNode(18)">Mobile (Mobile Developer)</button>
+  </div>
+
+  <div id="node-16" class="node">
+    Role: Backend Developer
+  </div>
+
+  <!-- Full-stack Choices -->
+  <div id="node-17" class="node">
+    Role: Full-stack Developer
+  </div>
+
+  <!-- Mobile Developer -->
+  <div id="node-18" class="node">
+    Role: Mobile Developer
+  </div>
+  
+</body>
+<script src="script.js"></script>
+</html>
