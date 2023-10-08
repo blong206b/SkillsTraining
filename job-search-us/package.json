@@ -1,0 +1,23 @@
+{
+    "name": "job-search-us",
+    "version": "1.0.0",
+    "description": "jobs api practice",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/blong206b/SkillsTraining.git#main"
+    },
+    "keywords": [
+        "jobs-board"
+    ],
+    "author": "Brett L Long",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/blong206b/SkillsTraining/issues"
+    },
+    "homepage": "https://github.com/blong206b/SkillsTraining/tree/main#readme"
+}
