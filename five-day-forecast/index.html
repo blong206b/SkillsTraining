@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>5-Day Weather Forecast for 23452</title>
+</head>
+<body>
+
+  <h1>5-Day Weather Forecast for 23452</h1>
+  <div id="forecast"></div>
+
+  <script>
+    // Your OpenWeatherMap API key
+    const YOUR_API_KEY = '92b9225e51ab432966916e1a90b5271c';
+
+    // API endpoint for 5-day forecast
+    const url = `https://api.openweathermap.org/data/2.5/forecast?zip=23452&units=imperial&appid=${YOUR_API_KEY}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        // Loop through the array of forecast data
+        data.list.forEach((forecast, index) => {
+          // For simplicity, we'll only show one forecast for each day
+          // OpenWeatherMap's 5-day forecast provides data in 3-hour intervals
+          if (index % 8 === 0) {
+            // Get the temperature and weather description
+            const temperature = forecast.main.temp;
+            const weatherDescription = forecast.weather[0].description;
+            const dateTime = new Date(forecast.dt * 1000).toLocaleString('en-US', {weekday: 'long', month: 'long', day: 'numeric'});
+
+            // Create a div to hold each forecast
+            const forecastDiv = document.createElement('div');
+            forecastDiv.className = 'forecast';
+
+            // Create a text node with the forecast information
+            const forecastText = document.createTextNode(`${dateTime}: ${temperature}°F, ${weatherDescription}`);
+
+            // Append the text node to the forecast div
+            forecastDiv.appendChild(forecastText);
+
+            // Append the forecast div to the page
+            document.querySelector('#forecast').appendChild(forecastDiv);
+          }
+        });
+      });
+  </script>
+
+</body>
+</html>
