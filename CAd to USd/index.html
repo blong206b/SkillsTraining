@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter: USD to CAD</title>
+</head>
+<body>
+
+  <h1>Currency Converter: USD to CAD</h1>
+
+  <label for="usdAmount">Amount in USD: </label>
+  <input type="number" id="usdAmount">
+  <button onclick="convertCurrency()">Convert</button>
+
+  <h2>Amount in CAD: <span id="cadAmount"></span></h2>
+
+  <script>
+    // Function to convert USD to CAD
+    const convertCurrency = async () => {
+      // Get the amount in USD from the input field
+      const usdAmount = document.getElementById('usdAmount').value;
+
+      // Your ExchangeRate-API API key
+      const YOUR_API_KEY = '27b3f63426137dbeb30c0b7e';
+
+      // API URL for USD to CAD conversion rate
+      const url = `https://api.exchangerate-api.com/v4/latest/USD?apikey=${YOUR_API_KEY}`;
+
+      // Fetch the conversion rate from the API
+      const response = await fetch(url);
+      const data = await response.json();
+
+      // Get the USD to CAD conversion rate
+      const usdToCadRate = data.rates.CAD;
+
+      // Convert the amount to CAD
+      const cadAmount = usdAmount * usdToCadRate;
+
+      // Display the amount in CAD
+      document.getElementById('cadAmount').textContent = cadAmount.toFixed(2);
+    };
+  </script>
+
+</body>
+</html>
