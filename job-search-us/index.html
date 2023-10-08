@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USAJobs Remote Web Developer Listings</title>
+</head>
+<body>
+
+<h1>Remote Web Developer Jobs in the USA</h1>
+<ul id="jobsList"></ul>
+
+<script>
+    // Your USAJobs API Key
+    const API_KEY = '1lBVx5/XU+8HwTB/3bPPvllRcp6mLmDgF1BKr2V9gnQ=';
+
+    // Define the base URL for the API
+    const BASE_URL = 'https://data.usajobs.gov/api/Search';
+
+    // Define the criteria for the search
+    const params = new URLSearchParams({
+        'Keyword': 'web developer',
+        'PositionScheduleTypeCode': '1', // Placeholder, you'd need to consult the API docs
+        'IsRemote': 'true', // Placeholder, you'd need to consult the API docs
+    });
+
+    // Create the full URL
+    const url = `${BASE_URL}?${params}`;
+
+    // Fetch job listings
+    fetch(url, {
+        headers: {
+            'Authorization-Key': API_KEY,
+            'User-Agent': 'YourAppName/1.0',  // Replace with your app name and version
+            'Host': 'data.usajobs.gov'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Populate the jobs list
+        const jobsList = document.getElementById('jobsList');
+        data.SearchResult.SearchResultItems.forEach(item => {
+            const jobTitle = item.MatchedObjectDescriptor.PositionTitle;
+            const jobUrl = item.MatchedObjectDescriptor.PositionURI;
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${jobUrl}" target="_blank">${jobTitle}</a>`;
+            jobsList.appendChild(li);
+        });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+</script>
+
+</body>
+</html>
