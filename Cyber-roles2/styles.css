@@ -1,0 +1,62 @@
+/* Reset some default browser styles */
+body, h1, button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Add a background color and some padding around the entire page */
+body {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Style the nodes */
+.node {
+  display: none;  /* Nodes are hidden by default */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* The 'active' class will show a node */
+.node.active {
+  display: block;
+}
+
+/* Image container for flexbox layout */
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+/* Wrapper for each image */
+.image-wrapper {
+  width: 30%;
+}
+
+/* Adds spacing between image wrappers */
+.image-wrapper + .image-wrapper {
+  margin-left: 10%;
+}
+
+/* Makes the image take the full width of its wrapper */
+.role-image {
+  width: 100%;
+  border: 1px solid #ccc; /* Added border for image separation */
+}
+
+/* Add some spacing and centering for buttons and title */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}

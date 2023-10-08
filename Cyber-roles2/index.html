@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security+ Career Path</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Security+ Career Path Decision Tree</h1>
+  
+  <div id="node-0" class="node">
+    Do you want to work in a technical or non-technical role?
+    <button onclick="moveToNode(1)">Technical Role</button>
+    <button onclick="moveToNode(6)">Non-Technical Role</button>
+  </div>
+
+  <div id="node-1" class="node">
+    Do you enjoy hands-on tasks or analytical tasks more?
+    <button onclick="moveToNode(2)">Hands-on Tasks</button>
+    <button onclick="moveToNode(4)">Analytical Tasks</button>
+  </div>
+
+<div id="node-2" class="node">
+    Which interests you more?
+    <button onclick="moveToNode(3)">Administering Security Tools/Systems</button>
+    <button onclick="moveToNode(5)">Investigating Security Incidents</button>
+    <button onclick="moveToNode(10)">Exploit Development/Vulnerability Discovery</button>
+
+    <div class="role-image">
+        <img src="img/administering_security_tools.jpg" alt="Administering Security Tools/Systems">
+        <p>Task: Administering security tools and systems to ensure the security of an organization's network and data.</p>
+    </div>
+
+    <div class="role-image">
+        <img src="img/investigating_security_incidents.jpg" alt="Investigating Security Incidents">
+        <p>Task: Investigating security incidents to determine the scope and impact of a security breach, identify the root cause, and recommend remediation and preventive measures.</p>
+        <ul>
+            <li>Gather evidence: Collect logs, system images, and other data from affected systems.</li>
+            <li>Analyze evidence: Identify suspicious activity and patterns.</li>
+            <li>Determine the scope and impact: Identify the affected systems, data, and users. Assess the damage caused by the incident.</li>
+            <li>Identify the root cause: Determine the vulnerability that was exploited and the attacker's methods.</li>
+            <li>Recommend remediation and preventive measures: Implement controls to mitigate the risk of similar incidents in the future.</li>
+        </ul>
+    </div>
+
+    <div class="role-image">
+        <img src="img/exploit_development.jpg" alt="Exploit Development/Vulnerability Discovery">
+        <p>Task: Exploit Development/Vulnerability Discovery</p>
+    </div>
+</div>
+
+
+
+
+  <div id="node-3" class="node">
+    Roles: Security Operations, Security Technician, Systems Administrator, Network Administrator, Security Architect.
+    <button onclick="moveToNode(11)">Apply for these roles</button>
+    <button onclick="moveToNode(1)">Back</button>
+  </div>
+
+  <div id="node-4" class="node">
+    Roles: Security Analyst, Threat Intelligence Analyst, Insider Threat Analyst, NOC Analyst.
+    <button onclick="moveToNode(11)">Apply for these roles</button>
+    <button onclick="moveToNode(1)">Back</button>
+  </div>
+
+  <div id="node-5" class="node">
+    Roles: Incident Response or SOC Analyst, Digital Forensics Analyst, NOC Analyst.
+    <button onclick="moveToNode(11)">Apply for these roles</button>
+    <button onclick="moveToNode(1)">Back</button>
+  </div>
+
+  <div id="node-10" class="node">
+    Roles: Penetration Testing, Bug Bounty, Malware Analysis, Security Researcher.
+    <button onclick="moveToNode(11)">Apply for these roles</button>
+    <button onclick="moveToNode(1)">Back</button>
+  </div>
+
+  <div id="node-11" class="node">
+    Consider acquiring relevant certifications and skills for your chosen role.
+    <!-- Additional guidance can be added here -->
+  </div>
+
+  <div id="node-6" class="node">
+    Which interests you more in a non-technical role?
+    <button onclick="moveToNode(7)">Creating New Policies or Awareness Documentation</button>
+    <button onclick="moveToNode(9)">Analyzing Data</button>
+  </div>
+
+  <div id="node-7" class="node">
+    Roles: Policy and Strategy Planner, Security Awareness Officer, Technical Writer.
+    <button onclick="moveToNode(11)">Apply for these roles</button>
+    <button onclick="moveToNode(1)">Back</button>
+  </div>
+
+  <div id="node-9" class="node">
+    Roles: GRC Analyst, Project/Product Manager, Data Protection Officer, Sales Engineer, Compliance Officer.
+    <button onclick="moveToNode(11)">Apply for these roles</button>
+    <button onclick="moveToNode(1)">Back</button>
+  </div>
+
+  <script>
+    function startOver() {
+      alert("Inline Start Over function called.");
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
