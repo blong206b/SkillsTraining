@@ -1,15 +1,22 @@
+// Load environment variables
 require('dotenv').config();
-const express = require('express');
-const fetch = require('node-fetch');
-const app = express();
-const port = 3000;
 
+// Dynamic import for node-fetch
+let fetch;
+import ('node-fetch').then(module => {
+    fetch = module.default;
+});
+
+// Check for the presence of the API key
 const API_KEY = process.env.USAJOBS_API_KEY;
-
 if (!API_KEY) {
     console.error("No API key found. Please check your .env file.");
     process.exit(1); // Exit the process with a "failure" code
 }
+
+const express = require('express');
+const app = express();
+const port = 3000;
 
 app.get('/getJobs', async(req, res) => {
     const BASE_URL = 'https://data.usajobs.gov/api/Search';
