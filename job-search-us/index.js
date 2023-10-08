@@ -1,22 +1,24 @@
-// Load environment variables
 require('dotenv').config();
 
-// Dynamic import for node-fetch
 let fetch;
 import ('node-fetch').then(module => {
     fetch = module.default;
 });
 
-// Check for the presence of the API key
 const API_KEY = process.env.USAJOBS_API_KEY;
 if (!API_KEY) {
     console.error("No API key found. Please check your .env file.");
-    process.exit(1); // Exit the process with a "failure" code
+    process.exit(1);
 }
 
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
 const port = 3000;
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Endpoint to fetch jobs
 app.get('/getJobs', async(req, res) => {
@@ -32,7 +34,7 @@ app.get('/getJobs', async(req, res) => {
         const response = await fetch(url, {
             headers: {
                 'Authorization-Key': API_KEY,
-                'User-Agent': 'YourAppName/1.0', // Replace with your app name and version
+                'User-Agent': 'YourAppName/1.0',
                 'Host': 'data.usajobs.gov'
             }
         });
@@ -42,19 +44,6 @@ app.get('/getJobs', async(req, res) => {
         console.error('Error:', error);
         res.status(500).json({ error: 'An error occurred' });
     }
-});
-
-const cors = require('cors');
-
-const app = express();
-
-// Enable CORS for all routes
-app.use(cors());
-
-// Your other routes and middleware here
-
-app.listen(3000, function() {
-    console.log('Server running at http://localhost:3000/');
 });
 
 // Simple "Hello, World!" endpoint
