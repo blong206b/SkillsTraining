@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Today's Weather</title>
+</head>
+<body>
+
+  <h1>Today's Weather for 23452</h1>
+
+  <script>
+    // Get the OpenWeatherMap API key
+    const apiKey = '24306fad6bfddec85c08fc31487d2c8a';
+
+    // Make a request to the OpenWeatherMap API
+    const url = `https://api.openweathermap.org/data/2.5/weather?zip=23452&appid=${YOUR_API_KEY}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        // Get the current temperature
+        const temperature = data.main.temp;
+
+        // Get the weather description
+        const weatherDescription = data.weather[0].description;
+
+        // Display the weather information
+        document.querySelector('h1').textContent += `: ${temperature}°F, ${weatherDescription}`;
+      });
+  </script>
+
+</body>
+</html>
