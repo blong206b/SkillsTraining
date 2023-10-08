@@ -18,6 +18,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// Endpoint to fetch jobs
 app.get('/getJobs', async(req, res) => {
     const BASE_URL = 'https://data.usajobs.gov/api/Search';
     const params = new URLSearchParams({
@@ -43,6 +44,12 @@ app.get('/getJobs', async(req, res) => {
     }
 });
 
+// Simple "Hello, World!" endpoint
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
+// Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });
