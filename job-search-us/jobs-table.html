@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Remote Web Developer Jobs in the USA</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Remote Web Developer Jobs in the USA</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Job Title</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody id="jobsTableBody">
+        </tbody>
+    </table>
+
+    <script>
+        // Define the URL for your local Node.js server
+        const SERVER_URL = 'http://localhost:3000/getJobs';
+
+        // Fetch job listings from your local server
+        fetch(SERVER_URL)
+            .then(response => response.json())
+            .then(data => {
+                // Get the table body element
+                const tableBody = document.getElementById('jobsTableBody');
+
+                // Populate the jobs table
+                data.SearchResult.SearchResultItems.forEach(item => {
+                    const jobTitle = item.MatchedObjectDescriptor.PositionTitle;
+                    const jobUrl = item.MatchedObjectDescriptor.PositionURI;
+                    const row = tableBody.insertRow();
+                    const cell1 = row.insertCell(0);
+                    const cell2 = row.insertCell(1);
+                    cell1.textContent = jobTitle;
+                    cell2.innerHTML = `<a href="${jobUrl}" target="_blank">View Job</a>`;
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
+
+</body>
+
+</html>
